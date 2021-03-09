@@ -1,7 +1,9 @@
 :root {
-	--sans: "National 2 Web", Helvetica, Arial, sans-serif;
-	--serif: "Tiempos Text Web", Georgia, Times, serif;
+	--sans: "Atkinson Hyperlegible";
 	--mono: Menlo, Consolas, Monaco, "Courier New", monospace;
+
+	--bold: 600;
+	--normal: 400;
 	
 	--z-bottom: -100;
   --z-middle: 0;
@@ -15,38 +17,80 @@
 	--gray-light: #c9c9c9;
 	--off-white: #f0f0f0;
 	--white: #fff;
-	--purple: #a239ca;
-	--blue: #4717f6;
-	--green: #34a29e;
-	--red: #ff533d;
-	--yellow: #e5e338;
+	
+	/* --purple: #a239ca;
+	--purple-light: #dfbaed;
+	--blue: #5b30f8;
+	--blue-light: #baa9f9;
+	--green: #2a837e;
+	--green-light: #8fdcd9; */
 
+	/* --red: #ff533d; */
+	/* --yellow: #e5e338; */
+	
+	--brown: #272425;
+
+	--yellow: #e8e500;
+	--yellowLight: #fffc4d;
+	--yellowHS: 59, 100%; 
+	--pink: #ff9de6;
+	--pinkLight: #ffb8ed;
+	--pinkHS: 315, 100%;
+	--blue: #a5d8f3;
+	--blueHS: 201, 76%;
+	--blueLight: #bce1f6;
+	--purple: #25194d;
+	
+	--bg1: var(--yellow);
+	--bg2: var(--pink);
+	--bg3: var(--blue);
+	--bg4: var(--gray-dark);
+	--fg1: hsl(var(--yellowHS), 14%);
+	--fg2: hsl(var(--pinkHS), 18%);
+	--fg3: hsl(var(--blueHS), 20%);
+	--dg1: hsl(var(--yellowHS), 26%);
+	--dg2: hsl(var(--pinkHS), 38%);
+	--dg3: hsl(var(--blueHS), 39%);
+
+	/* --fg1: var(--purple); */
+	/* --fg2: var(--purple);
+	--fg3: var(--purple); */
+	
+	--fg: var(--purple);
 	--bg: var(--white);
-	--fg: var(--off-black);
-	--default: var(--gray-light);
-	--primary: var(--red);
-	--secondary: var(--green);
+	--secondary: var(--purple);
 
 	/* water.css */
 
 	--body-font: var(--sans);
-	--background-body: var(--white);
-  --background-ui: var(--off-white);
+	--background-body: var(--bg);
+  --background: var(--off-white);
   --background-alt: var(--off-white);
-  --selection: var(--gray);
-  --text-main: var(--off-black);
-  --links: var(--purple);
-  --focus: var(--green);
-  --border: var(--gray-light);
+  --selection: var(--highlight);
+  --text-main: var(--fg);
+  --links: var(--fg);
+  --focus: var(--fg);
+  --border: var(--bg);
   --animation-duration: 0.1s;
-  --button-hover: var(--gray-light);
-  --scrollbar-thumb: var(--gray-light);
-  --scrollbar-thumb-hover: var(--gray-dark);
+  --button-hover: var(--white);
+  --scrollbar-thumb: color-mod(var(--button-hover) lightness(-3%));
+  --scrollbar-thumb-hover: color-mod(var(--button-hover) lightness(-10%));
 	--form-placeholder: var(--gray-dark);
 	--form-font: var(--sans);
 	--form-text: var(--gray-dark);
 	--input-thumb: var(--gray-dark);
-  --highlight: var(--yellow);
+	--highlight: var(--yellow);
+	
+	--nav-height: 128px;
+}
+
+html, body, main {
+	height: 100%;
+	overflow: hidden;
+}
+
+main {
+	width: 100%;
 }
 
 .skip-to-main {
@@ -66,11 +110,161 @@
 
 /* pudding */
 .wordmark svg path {
-	fill: currentColor;
+	fill: var(--fg);
 }
 
-/* demo */
-#demo svg {
-	width: 1em;
-	vertical-align: middle;
+/* story */
+b, strong {
+	font-weight: var(--bold);
+}
+
+body {
+	font-weight: var(--normal);
+	background-color: var(--blue);
+}
+
+mark {
+	padding: 0 0.25em;
+}
+
+mark.custom {
+	background: var(--default);
+	color: var(--white);
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.slider .slide:nth-of-type(1) {
+	--fg: var(--fg3);
+	--bg: var(--bg3);
+	--default: var(--dg3);
+	background-color: var(--bg3);
+	color: var(--fg3);
+	--highlight: var(--bg1);
+	--background-alt: var(--bg3);
+	--text-main: var(--fg3);
+  --links: var(--fg3);
+  --focus: var(--fg3);
+	--border: var(--bg3);
+	--input-thumb: var(--fg3);
+}
+
+.slider .slide:nth-of-type(2) .slide {
+	--fg: var(--fg1);
+	--bg: var(--bg1);
+	--default: var(--dg1);
+	background-color: var(--bg1);
+	color: var(--fg1);
+	--highlight: var(--bg3);
+	--background-alt: var(--bg1);
+	--text-main: var(--fg1);
+  --links: var(--fg1);
+  --focus: var(--fg1);
+	--border: var(--bg1);
+	--input-thumb: var(--fg1);
+}
+
+.slider .slide:nth-of-type(3) .slide {
+	--fg: var(--fg2);
+	--bg: var(--bg2);
+	--default: var(--dg2);
+	background-color: var(--bg2);
+	color: var(--fg2);
+	--highlight: var(--bg1);
+	--background-alt: var(--bg2);
+	--text-main: var(--fg2);
+  --links: var(--fg2);
+  --focus: var(--fg2);
+	--border: var(--bg2);
+	--input-thumb: var(--fg2);
+}
+
+.slider .slide:nth-of-type(4) .slide {
+	--fg: var(--fg3);
+	--bg: var(--bg3);
+	--default: var(--dg3);
+	background-color: var(--bg3);
+	color: var(--fg3);
+	--highlight: var(--bg1);
+	--background-alt: var(--bg3);
+	--text-main: var(--fg3);
+  --links: var(--fg3);
+  --focus: var(--fg3);
+	--border: var(--bg3);
+	--input-thumb: var(--fg3);
+}
+.slider .slide:nth-of-type(5) .slide {
+	--fg: var(--fg2);
+	--bg: var(--bg2);
+	--default: var(--dg2);
+	background-color: var(--bg2);
+	color: var(--fg2);
+	--highlight: var(--bg1);
+	--background-alt: var(--bg2);
+	--text-main: var(--fg2);
+  --links: var(--fg2);
+  --focus: var(--fg2);
+	--border: var(--bg2);
+	--input-thumb: var(--fg2);
+}
+/* 
+.slider.horizontal .slide:nth-of-type(n + 2) .content {
+	opacity: 0;
+	transition: opacity 500ms ease;
+}
+
+.slider.horizontal .slide:nth-of-type(n + 2).slide-prev .slide-content {
+	opacity: 0;
+	transition: opacity 500ms ease;
+}
+
+.slider.horizontal .slide:nth-of-type(n + 2).slide-next .slide-content {
+	opacity: 0;
+	transition: opacity 500ms ease;
+}
+
+.slider.horizontal .slide:nth-of-type(n + 2).slide-active .slide-content {
+	opacity: 1;
+} */
+
+.svelte-crossword {
+  --xd-font: var(--sans);
+  --xd-primary-highlight-color: var(--yellow);
+  --xd-secondary-highlight-color: var(--yellowLight);
+  --xd-main-color: var(--fg);
+  --xd-bg-color: var(--bg);
+  --xd-accent-color: var(--off-white);
+  --xd-scrollbar-color: var(--default);
+  --xd-order: row;
+}
+
+.svelte-crossword .toolbar button {
+	font-weight: var(--bold);
+	border: 1px solid var(--fg);
+}
+
+.svelte-crossword .play .clues {
+	height: 20em;
+}
+
+button {
+	border: 1px solid var(--fg);
+}
+
+.horizontal .slide:first-of-type .slide-content {
+	justify-content: center;
+	padding-top: 0;
+}
+
+.horizontal .slide:last-of-type .slide-content {
+	padding-top: 3em;
+}
+
+@media only screen and (min-width: 640px) {
+	.horizontal .slide:last-of-type .slide-content {
+		padding-top: 0;
+	}
 }
