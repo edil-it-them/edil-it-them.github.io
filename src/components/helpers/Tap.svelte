@@ -8,17 +8,20 @@
   export let showArrows = false; // boolean or array of directions
   export let disable = [];
   export let directions = ["left", "right"];
-  export let size = "64px";
-  export let arrowSize = "48px";
   export let arrowStroke = "#000";
   export let arrowStrokeWidth = "2";
   export let arrowPosition = "center"; // start, center, end
 
   const dispatch = createEventDispatcher();
   let innerHeight;
+  let innerWidth;
 
+  $: size = innerWidth < 640 ? "72px" : "64px";
+  $: arrowSize = innerWidth < 640 ? "64px" : "48px";
+
+  // modified
   $: getW = (dir) =>
-    ["left", "right"].includes(dir) ? size : full ? "100%" : size;
+    ["left", "right"].includes(dir) ? size : full ? "100%" : "172px";
   $: getH = (dir) =>
     ["up", "down"].includes(dir) ? size : full ? "100%" : size;
 
@@ -36,7 +39,7 @@
   );
 </script>
 
-<svelte:window on:keydown="{onKeyDown}" bind:innerHeight />
+<svelte:window on:keydown="{onKeyDown}" bind:innerHeight bind:innerWidth />
 
 <section class:debug style="height: {innerHeight}px;">
   {#each directions as dir}
@@ -46,6 +49,7 @@
       aria-label="{dir}"
       class="{dir} {arrowPosition}"
       class:full
+      class:visible="{visibleArrows.includes(dir)}"
       disabled="{disable.includes(dir)}">
       {#if visibleArrows.includes(dir)}
         <span style="font-size: {arrowSize};"><Icon
@@ -83,10 +87,7 @@
   button:disabled {
     opacity: 0.2;
     cursor: not-allowed;
-  }
-
-  button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
   }
 
   .left {
@@ -121,13 +122,11 @@
   .up {
     top: 0;
     left: 0;
-    /* text-align: center; */
   }
 
   .down {
     bottom: 0;
     left: 0;
-    /* text-align: center; */
   }
 
   .up.center,
@@ -136,10 +135,11 @@
     transform: translateX(-50%);
   }
 
+  /* modified */
   .up.end,
   .down.end {
-    right: 0;
-    left: auto;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   /* full positions */
@@ -197,5 +197,12 @@
   .debug .down {
     background: orange;
     opacity: 0.5;
+  }
+
+  @media only screen and (min-width: 640px) {
+    button.visible.left:hover,
+    button.visible.right:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
   }
 </style>

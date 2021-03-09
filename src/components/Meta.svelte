@@ -1,16 +1,20 @@
+<script>
+  export let hed;
+  export let dek;
+</script>
 <svelte:head>
-  <title>Svelte Starter</title>
+  <title>{hed}</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta name="description" content={dek} />
+  <meta name="author" content="Edil Baiyzbekov" />
   <meta name="news_keywords" content="" />
 
-  <meta property="og:title" content="" />
+  <meta property="og:title" content={hed} />
   <meta property="og:site_name" content="" />
   <meta property="og:url" content="" />
-  <meta property="og:description" content="" />
+  <meta property="og:description" content={dek} />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="en_US" />
 
