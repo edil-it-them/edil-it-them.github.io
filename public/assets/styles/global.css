@@ -1,69 +1,70 @@
 :root {
-	--sans: "Atkinson Hyperlegible";
-	--mono: Menlo, Consolas, Monaco, "Courier New", monospace;
+  --sans: "Atkinson Hyperlegible";
+  --mono: Menlo, Consolas, Monaco, "Courier New", monospace;
 
-	--bold: 600;
-	--normal: 400;
-	
-	--z-bottom: -100;
+  --bold: 600;
+  --normal: 400;
+
+  --z-bottom: -100;
   --z-middle: 0;
   --z-top: 100;
-	--z-overlay: 1000;
+  --z-overlay: 1000;
 
-	--black: #000;
-	--off-black: #282828;
-	--gray-dark: #5b5b5b;
-	--gray: #949494;
-	--gray-light: #c9c9c9;
-	--off-white: #f0f0f0;
-	--white: #fff;
-	
-	/* --purple: #a239ca;
+  --black: #000;
+  --off-black: #282828;
+  --gray-dark: #5b5b5b;
+  --gray: #949494;
+  --gray-light: #c9c9c9;
+  --off-white: #f0f0f0;
+  --white: #fff;
+
+  /* --purple: #a239ca;
 	--purple-light: #dfbaed;
 	--blue: #5b30f8;
 	--blue-light: #baa9f9;
 	--green: #2a837e;
 	--green-light: #8fdcd9; */
 
-	/* --red: #ff533d; */
-	/* --yellow: #e5e338; */
-	
-	--brown: #272425;
+  /* --red: #ff533d; */
+  /* --yellow: #e5e338; */
 
-	--yellow: #e8e500;
-	--yellowLight: #fffc4d;
-	--yellowHS: 59, 100%; 
-	--pink: #ff9de6;
-	--pinkLight: #ffb8ed;
-	--pinkHS: 315, 100%;
-	--blue: #a5d8f3;
-	--blueHS: 201, 76%;
-	--blueLight: #bce1f6;
-	--purple: #25194d;
-	
-	--bg1: var(--yellow);
-	--bg2: var(--pink);
-	--bg3: var(--blue);
-	--bg4: var(--gray-dark);
-	--fg1: hsl(var(--yellowHS), 14%);
-	--fg2: hsl(var(--pinkHS), 18%);
-	--fg3: hsl(var(--blueHS), 20%);
-	--dg1: hsl(var(--yellowHS), 26%);
-	--dg2: hsl(var(--pinkHS), 38%);
-	--dg3: hsl(var(--blueHS), 39%);
+  --brown: #272425;
 
-	/* --fg1: var(--purple); */
-	/* --fg2: var(--purple);
+  --yellow: #e8e500;
+  --yellowLight: #fffc4d;
+  --yellowHS: 59, 100%;
+  --pink: #ff9de6;
+  --pinkLight: #ffb8ed;
+  --pinkHS: 315, 100%;
+  --blue: #a5d8f3;
+  --blueHS: 201, 76%;
+  --blueLight: #bce1f6;
+  --purple: #25194d;
+
+  --bg1: var(--yellow);
+  --bg2: var(--pink);
+  --bg3: var(--blue);
+  --bg4: var(--gray-dark);
+  --bg5: var(--off-black);
+  --fg1: hsl(var(--yellowHS), 14%);
+  --fg2: hsl(var(--pinkHS), 18%);
+  --fg3: hsl(var(--blueHS), 20%);
+  --dg1: hsl(var(--yellowHS), 26%);
+  --dg2: hsl(var(--pinkHS), 38%);
+  --dg3: hsl(var(--blueHS), 39%);
+
+  /* --fg1: var(--purple); */
+  /* --fg2: var(--purple);
 	--fg3: var(--purple); */
-	
-	--fg: var(--purple);
-	--bg: var(--white);
-	--secondary: var(--purple);
 
-	/* water.css */
+  --fg: var(--purple);
+  --bg: var(--white);
+  --secondary: var(--purple);
 
-	--body-font: var(--sans);
-	--background-body: var(--bg);
+  /* water.css */
+
+  --body-font: var(--mono);
+  --background-body: var(--bg);
   --background: var(--off-white);
   --background-alt: var(--off-white);
   --selection: var(--highlight);
@@ -75,69 +76,86 @@
   --button-hover: var(--white);
   --scrollbar-thumb: color-mod(var(--button-hover) lightness(-3%));
   --scrollbar-thumb-hover: color-mod(var(--button-hover) lightness(-10%));
-	--form-placeholder: var(--gray-dark);
-	--form-font: var(--sans);
-	--form-text: var(--gray-dark);
-	--input-thumb: var(--gray-dark);
-	--highlight: var(--yellow);
-	
-	--nav-height: 128px;
+  --form-placeholder: var(--gray-dark);
+  --form-font: var(--mono);
+  --form-text: var(--gray-dark);
+  --input-thumb: var(--gray-dark);
+  --highlight: var(--yellow);
+
+  --nav-height: 128px;
 }
 
-html, body, main {
-	height: 100%;
-	overflow: hidden;
+html,
+body,
+main {
+  height: 100%;
+  overflow: hidden;
 }
 
 main {
-	width: 100%;
+  width: 100%;
 }
 
 .skip-to-main {
-	border: none;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
+  border: none;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
 }
 
 .skip-to-main:focus {
-	width: auto;
-	height: auto;
-	padding: 0.5em;
-	z-index: 1000;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+  z-index: 1000;
 }
 
 /* pudding */
 .wordmark svg path {
-	fill: var(--fg);
+  fill: var(--fg);
 }
 
 /* story */
-b, strong {
-	font-weight: var(--bold);
+b,
+strong {
+  font-weight: var(--bold);
 }
 
 body {
-	font-weight: var(--normal);
-	background-color: var(--blue);
+  font-weight: var(--normal);
+  background-color: var(--blue);
 }
 
 mark {
-	padding: 0 0.25em;
+  padding: 0 0.25em;
 }
 
 mark.custom {
-	background: var(--default);
-	color: var(--white);
+  background: var(--default);
+  color: var(--white);
 }
 
 .swiper-container {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .slider .slide:nth-of-type(1) {
+  --fg: var(--fg3);
+  --bg: var(--bg5);
+  --default: var(--dg3);
+  background-color: var(--bg5);
+  color: var(--bg3);
+  --highlight: var(--bg1);
+  --background-alt: var(--bg5);
+  --text-main: var(--fg3);
+  --links: var(--fg3);
+  --focus: var(--fg3);
+  --border: var(--bg5);
+  --input-thumb: var(--fg3);
+}
+.slider .slide:nth-of-type(2) .slide {
 	--fg: var(--fg3);
 	--bg: var(--bg3);
 	--default: var(--dg3);
@@ -146,57 +164,71 @@ mark.custom {
 	--highlight: var(--bg1);
 	--background-alt: var(--bg3);
 	--text-main: var(--fg3);
-  --links: var(--fg3);
-  --focus: var(--fg3);
+	--links: var(--fg3);
+	--focus: var(--fg3);
 	--border: var(--bg3);
 	--input-thumb: var(--fg3);
-}
-
-.slider .slide:nth-of-type(2) .slide {
-	--fg: var(--fg1);
-	--bg: var(--bg1);
-	--default: var(--dg1);
-	background-color: var(--bg1);
-	color: var(--fg1);
-	--highlight: var(--bg3);
-	--background-alt: var(--bg1);
-	--text-main: var(--fg1);
-  --links: var(--fg1);
-  --focus: var(--fg1);
-	--border: var(--bg1);
-	--input-thumb: var(--fg1);
-}
+  }
 
 .slider .slide:nth-of-type(3) .slide {
-	--fg: var(--fg2);
-	--bg: var(--bg2);
-	--default: var(--dg2);
-	background-color: var(--bg2);
-	color: var(--fg2);
-	--highlight: var(--bg1);
-	--background-alt: var(--bg2);
-	--text-main: var(--fg2);
-  --links: var(--fg2);
-  --focus: var(--fg2);
-	--border: var(--bg2);
-	--input-thumb: var(--fg2);
+  --fg: var(--fg1);
+  --bg: var(--bg1);
+  --default: var(--dg1);
+  background-color: var(--bg1);
+  color: var(--fg1);
+  --highlight: var(--bg3);
+  --background-alt: var(--bg1);
+  --text-main: var(--fg1);
+  --links: var(--fg1);
+  --focus: var(--fg1);
+  --border: var(--bg1);
+  --input-thumb: var(--fg1);
 }
 
 .slider .slide:nth-of-type(4) .slide {
-	--fg: var(--fg3);
-	--bg: var(--bg3);
-	--default: var(--dg3);
-	background-color: var(--bg3);
-	color: var(--fg3);
-	--highlight: var(--bg1);
-	--background-alt: var(--bg3);
-	--text-main: var(--fg3);
+  --fg: var(--fg2);
+  --bg: var(--bg2);
+  --default: var(--dg2);
+  background-color: var(--bg2);
+  color: var(--fg2);
+  --highlight: var(--bg1);
+  --background-alt: var(--bg2);
+  --text-main: var(--fg2);
+  --links: var(--fg2);
+  --focus: var(--fg2);
+  --border: var(--bg2);
+  --input-thumb: var(--fg2);
+}
+
+.slider .slide:nth-of-type(5) .slide {
+  --fg: var(--fg3);
+  --bg: var(--bg3);
+  --default: var(--dg3);
+  background-color: var(--bg3);
+  color: var(--fg3);
+  --highlight: var(--bg1);
+  --background-alt: var(--bg3);
+  --text-main: var(--fg3);
   --links: var(--fg3);
   --focus: var(--fg3);
-	--border: var(--bg3);
-	--input-thumb: var(--fg3);
+  --border: var(--bg3);
+  --input-thumb: var(--fg3);
 }
-.slider .slide:nth-of-type(5) .slide {
+.slider .slide:nth-of-type(6) .slide {
+  --fg: var(--fg2);
+  --bg: var(--bg2);
+  --default: var(--dg2);
+  background-color: var(--bg2);
+  color: var(--fg2);
+  --highlight: var(--bg1);
+  --background-alt: var(--bg2);
+  --text-main: var(--fg2);
+  --links: var(--fg2);
+  --focus: var(--fg2);
+  --border: var(--bg2);
+  --input-thumb: var(--fg2);
+}
+.slider .slide:nth-of-type(7) .slide {
 	--fg: var(--fg2);
 	--bg: var(--bg2);
 	--default: var(--dg2);
@@ -205,11 +237,25 @@ mark.custom {
 	--highlight: var(--bg1);
 	--background-alt: var(--bg2);
 	--text-main: var(--fg2);
-  --links: var(--fg2);
-  --focus: var(--fg2);
+	--links: var(--fg2);
+	--focus: var(--fg2);
 	--border: var(--bg2);
 	--input-thumb: var(--fg2);
-}
+  }
+  .slider .slide:nth-of-type(8) .slide {
+	--fg: var(--fg3);
+	--bg: var(--bg3);
+	--default: var(--dg3);
+	background-color: var(--bg3);
+	color: var(--fg3);
+	--highlight: var(--bg1);
+	--background-alt: var(--bg3);
+	--text-main: var(--fg3);
+	--links: var(--fg3);
+	--focus: var(--fg3);
+	--border: var(--bg3);
+	--input-thumb: var(--fg3);
+  }
 /* 
 .slider.horizontal .slide:nth-of-type(n + 2) .content {
 	opacity: 0;
@@ -242,29 +288,29 @@ mark.custom {
 }
 
 .svelte-crossword .toolbar button {
-	font-weight: var(--bold);
-	border: 1px solid var(--fg);
+  font-weight: var(--bold);
+  border: 1px solid var(--fg);
 }
 
 .svelte-crossword .play .clues {
-	height: 20em;
+  height: 20em;
 }
 
 button {
-	border: 1px solid var(--fg);
+  border: 1px solid var(--fg);
 }
 
 .horizontal .slide:first-of-type .slide-content {
-	justify-content: center;
-	padding-top: 0;
+  justify-content: center;
+  padding-top: 0;
 }
 
 .horizontal .slide:last-of-type .slide-content {
-	padding-top: 3em;
+  padding-top: 3em;
 }
 
 @media only screen and (min-width: 640px) {
-	.horizontal .slide:last-of-type .slide-content {
-		padding-top: 0;
-	}
+  .horizontal .slide:last-of-type .slide-content {
+    padding-top: 0;
+  }
 }

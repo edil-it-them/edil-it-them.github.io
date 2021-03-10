@@ -1,6 +1,5 @@
 <script>
     import Slide from "./helpers/Slider.Slide.svelte";
-    // import Oreo from "./Oreo.svelte";
     // import Chart from "./Chart.svelte";
     // import Special from "./Special.svelte";
     import Image from "./Image.svelte";
@@ -8,9 +7,7 @@
     import ArrowKeys from "./ArrowKeys.svelte";
     import Icon from "./helpers/Icon.svelte";
   
-    // export let version;
     export let level;
-    // export let duration;
     export let text;
     export let slides;
     export let next;
@@ -29,22 +26,21 @@
             <Icon name="arrow-up" /></span>
         </p>
       {/if}
-      <!-- <p class="level">Project {level}</p> -->
-      <!-- <p class="version"><strong>{version}</strong></p> -->
-      <!-- <Oreo version="{version}" /> -->
-      <p class="text">{text}</p>
-      <Image name={gif}/>
-      <p>{tech}
+
+      <p class="{+level >= 1 ? 'text bold': 'text'}">{@html text}</p>
+      {#if gif}
+        <Image name={gif}/>
+      {/if}
+      <p>{tech ? tech : ''}
       {#if awards}
         <br>
         {@html awards}
       {/if}
       </p>
       <ArrowKeys active="right" />
-      {#if +level < 5}
+      {#if +level < 6}
         <p class="next">
-          Project
-          {+level + 1}
+          {+level == 5 ? 'Other projects': 'Project ' + (+level + 1)}
           <span class="complex">: {next}</span>
           <span class="arrow">
             <Icon name="arrow-down" /></span>
@@ -97,7 +93,7 @@
           <Image name="{image}" />
         {/if}
   
-        {#if +level < 5 && i === slides.length - 1}
+        {#if +level < 6 && i === slides.length - 1}
           <p class="next">
             Project
             {+level + 1}
@@ -169,6 +165,9 @@
   
     .text {
       font-size: 1em;
+    }
+    .bold{
+      font-weight: bold;
     }
   
     .reverse {

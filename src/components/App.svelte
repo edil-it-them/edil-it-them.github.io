@@ -60,21 +60,17 @@ function handleTouchMove(evt) {
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
             /* left swipe */ 
-            console.log('swiped left');
             sliderX.forEach((s) => s.next());
         } else {
             /* right swipe */
-            console.log('swiped right');
             sliderX.forEach((s) => s.prev());
         }                       
     } else {
         if ( yDiff > 0 ) {
             /* up swipe */
-            console.log('swiped up');
             sliderY.next();
         } else { 
             /* down swipe */
-            console.log('swiped down');
             sliderY.prev();
         }                                                                 
     }
@@ -143,7 +139,7 @@ function handleTouchMove(evt) {
     bind:active="{activeY}"
   >
     <Slide>
-      <Intro hed="{copy.hed}" intro="{copy.intro}" />
+      <Intro hed="{copy.hed}" intro="{copy.intro}" email='{copy.email}' />
     </Slide>
 
     {#each copy.levels as level, i}

@@ -2,75 +2,70 @@
   export let name;
 
   const data = {
-    email: {
-      src: "email.jpg",
-      alt: "Screenshot of an email from a tweet",
-      caption:
-        "Letter to the editor of the USA Today crossword screenshot from <a href='https://twitter.com/smileyb97/status/1228105944061685760'>a tweet.</a>",
-    },
-    mukbang: {
-      src: "mukbang.jpg",
-      alt: "Screenshot of two people eating oreos with mustard",
-      caption:
-        "Shay Mitchell tries an Oreo with mustard on <a href='https://www.youtube.com/watch?v=FA1FCW_DmEI?t=83'>YouTube.</a>",
-    },
-    aoc: {
-      src: "aoc.jpg",
-      alt: "Screenshot of Ken Jennings tweet about AOC and LBJ",
-      caption:
-        "Ken Jennings <a href='https://twitter.com/KenJennings/status/1070120490864336896'>tweeting</a> crossword constructing tips.",
-    },
-    chef: {
-      src: "chef.png",
-      alt: "Chef kiss",
-      caption: "",
-    },
     d3js: {
       src: "d3js.gif",
-      alt: 'gif of my scrollitelling project',
+      alt: "gif of my scrollitelling project",
       caption: "Click to see the project",
-      href: 'https://rus.azattyk.org/a/30807488.html',
+      href: "https://rus.azattyk.org/a/30807488.html",
     },
     unity: {
       src: "unity.gif",
-      alt: 'gif of my unity project',
+      alt: "gif of my unity project",
       caption: "Click to see the project",
       href: "https://rolikasi.github.io/covid_ukraine_unity/Tiny3D.html",
     },
     telegram: {
-      src: 'telegram.gif',
-      alt: 'gif of my telegram project',
+      src: "telegram.gif",
+      alt: "gif of my telegram project",
       caption: "",
-      href: 'https://t.me/ClickHelpKg_bot',
+      href: "https://t.me/ClickHelpKg_bot",
     },
     insta: {
-      src: 'insta.gif',
-      alt: "",
+      src: "insta.gif",
+      alt: "gif of my instastory project",
       caption: "",
-      href:"",
+      href: "https://rus.azattyk.org/a/30692108.html",
     },
     gender: {
-      src: 'gender.gif',
-      alt: '',
-      caption: '',
-      href: '',
+      src: "gender.gif",
+      alt: "gif of my AR project",
+      caption: "",
+      href: "https://www.instagram.com/ar/174810097277579/",
     },
     arcovid: {
-      src: 'arcovid.gif',
-      alt: '',
-      caption: '',
-      href: '',
+      src: "arcovid.gif",
+      alt: "gif of my AR project",
+      caption: "",
+      href: "",
+    },
+    maps: {
+      src: "maps.gif",
+      alt: "gif of my QGIS project",
+      caption: "",
+      href: "https://kloop.kg/blog/2019/07/26/pochemu-v-bishkeke-tak-zharko-obyasnyaem-na-teplokartah/",
+    },
+    femicid: {
+      src: "femicid.jpg",
+      alt: "preview of the femicid project",
+      caption: "",
+      href: "https://kloop.kg/blog/2020/12/17/ya-by-ee-vse-ravno-ubil-issledovanie-kloopa-o-femitside-v-kyrgyzstane/",
+    },
+    air: {
+      src: "air.gif",
+      alt: "preview of my air pollution project",
+      caption: "",
+      href: "https://kloop.kg/blog/2020/12/17/ya-by-ee-vse-ravno-ubil-issledovanie-kloopa-o-femitside-v-kyrgyzstane/",
     }
-
   };
 </script>
 
 <figure>
-  <a href={data[name].href} target="_blank">
-  <img
-    loading="lazy"
-    src="assets/img/{data[name].src}"
-    alt="{data[name].alt}" />
+  <a href="{data[name].href}" target="_blank">
+    <img
+      loading="lazy"
+      src="assets/img/{data[name].src}"
+      alt="{data[name].alt}"
+    />
   </a>
   <figcaption>
     {@html data[name].caption}
@@ -80,17 +75,22 @@
 <style>
   figure {
     margin: 0 auto;
-    max-width: 18em;
+    max-width: 15em;
     padding: 1em;
   }
   img {
     border-radius: 4px;
-    max-height: 23em;
+    max-height: 20em;
     box-shadow: 0 0 8px 0px var(--fg);
   }
   figcaption {
     margin-top: 1em;
     font-style: italic;
     font-size: 0.75em;
+  }
+  @media only screen and (min-width: 640px) {
+    figure{
+      max-width: 20em;
+    }
   }
 </style>
