@@ -94,6 +94,7 @@ export default {
       hmr({
         public: "public",
         inMemory: true,
+        host: "0.0.0.0",
         compatModuleHot: !isHot
       }),
     

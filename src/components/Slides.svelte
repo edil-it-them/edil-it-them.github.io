@@ -6,6 +6,7 @@
 
     import ArrowKeys from "./ArrowKeys.svelte";
     import Icon from "./helpers/Icon.svelte";
+import Links from "./Links.svelte";
   
     export let level;
     export let text;
@@ -14,14 +15,14 @@
     export let gif;
     export let tech;
     export let awards;
+    export let outro;
   </script>
   
   <Slide>
     <div class="slide-content intro">
-      {#if +level > 1}
+      {#if +level > 0}
         <p class="prev">
-          Project
-          {+level - 1}
+          {level == 1 ? "My Stack" : 'Project ' + (level - 1)}
           <span>
             <Icon name="arrow-up" /></span>
         </p>
@@ -31,10 +32,16 @@
       {#if gif}
         <Image name={gif}/>
       {/if}
-      <p>{tech ? tech : ''}
+      <p class="text">{tech ? tech : ''}
       {#if awards}
         <br>
         {@html awards}
+      {/if}
+      {#if outro}
+          <div class="special">
+            <p>{@html outro}</p>
+            <Links gray=true/>
+          </div>
       {/if}
       </p>
       <ArrowKeys active="right" />
@@ -63,7 +70,7 @@
   
         {#if typeof text === 'string'}
           <div class="graf">
-            <p>
+            <p class='text'>
               {@html text}
             </p>
           </div>
@@ -83,11 +90,7 @@
           </div>
         {/if}
   
-        {#if special}
-          <div class="special">
-            <!-- <Special name="{special}" /> -->
-          </div>
-        {/if}
+        
   
         {#if image}
           <Image name="{image}" />
@@ -131,6 +134,10 @@
       margin: 1em auto;
       max-width: 35em;
       padding: 0 1em;
+      
+    }
+    .text{
+      font-size: .8em;
     }
   
     .chart {
@@ -146,25 +153,6 @@
       opacity: 0.75;
       text-transform: uppercase;
       font-size: 0.75em;
-    }
-  
-    .version {
-      text-transform: capitalize;
-      font-size: 2em;
-    }
-  
-    .duration {
-      font-size: 0.75em;
-      /* text-transform: uppercase; */
-    }
-  
-    .oreo {
-      width: 16em;
-      height: 16em;
-    }
-  
-    .text {
-      font-size: 1em;
     }
     .bold{
       font-weight: bold;
@@ -211,6 +199,11 @@
     .complex {
       display: none;
     }
+    @media only screen and (min-width: 320px) {
+      .text{
+      font-size: 1em;
+    }
+  }
   
     @media only screen and (min-width: 640px) {
       .slide-content {

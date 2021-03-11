@@ -46,6 +46,7 @@
   --bg3: var(--blue);
   --bg4: var(--gray-dark);
   --bg5: var(--off-black);
+  --bg6: var(--off-white);
   --fg1: hsl(var(--yellowHS), 14%);
   --fg2: hsl(var(--pinkHS), 18%);
   --fg3: hsl(var(--blueHS), 20%);
@@ -215,38 +216,38 @@ mark.custom {
   --input-thumb: var(--fg3);
 }
 .slider .slide:nth-of-type(6) .slide {
-  --fg: var(--fg2);
-  --bg: var(--bg2);
-  --default: var(--dg2);
-  background-color: var(--bg2);
-  color: var(--fg2);
+  --fg: var(--fg3);
+  --bg: var(--bg5);
+  --default: var(--dg3);
+  background-color: var(--bg5);
+  color: var(--bg3);
   --highlight: var(--bg1);
-  --background-alt: var(--bg2);
-  --text-main: var(--fg2);
-  --links: var(--fg2);
-  --focus: var(--fg2);
-  --border: var(--bg2);
-  --input-thumb: var(--fg2);
+  --background-alt: var(--bg5);
+  --text-main: var(--fg3);
+  --links: var(--fg3);
+  --focus: var(--fg3);
+  --border: var(--bg5);
+  --input-thumb: var(--fg3);
 }
 .slider .slide:nth-of-type(7) .slide {
-	--fg: var(--fg2);
-	--bg: var(--bg2);
-	--default: var(--dg2);
-	background-color: var(--bg2);
-	color: var(--fg2);
-	--highlight: var(--bg1);
-	--background-alt: var(--bg2);
-	--text-main: var(--fg2);
-	--links: var(--fg2);
-	--focus: var(--fg2);
-	--border: var(--bg2);
-	--input-thumb: var(--fg2);
+	--fg: var(--fg1);
+  --bg: var(--bg1);
+  --default: var(--dg1);
+  background-color: var(--bg1);
+  color: var(--fg1);
+  --highlight: var(--bg3);
+  --background-alt: var(--bg1);
+  --text-main: var(--fg1);
+  --links: var(--fg1);
+  --focus: var(--fg1);
+  --border: var(--bg1);
+  --input-thumb: var(--fg1);
   }
   .slider .slide:nth-of-type(8) .slide {
-	--fg: var(--fg3);
+    --fg: var(--fg3);
 	--bg: var(--bg3);
 	--default: var(--dg3);
-	background-color: var(--bg3);
+	background-color: var(--bg6);
 	color: var(--fg3);
 	--highlight: var(--bg1);
 	--background-alt: var(--bg3);

@@ -7,11 +7,10 @@
 </script>
 
 <section id="intro">
-  <h2>Edil Baiyzbekov</h2>
-  <h2>Full-stack Data-journalist</h2>
+  <h2>Edil Baiyzbekov<br>Full-stack Data-journalist</h2>
   <p>{intro}</p>
   <p>{email}</p>
-  <Links/>
+  <Links />
   <div class="instructions">
     <p><span class="desktop">Use arrow keys or </span>tap below to navigate</p>
     <div class="keys">
@@ -38,58 +37,11 @@
     margin: 0.5em 0;
   }
 
-  .wordmark {
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  .top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  h1 {
-    font-weight: var(--bold);
-    line-height: 1;
-    font-size: 1.25em;
-    max-width: 12em;
-    padding: 1rem;
-    margin: 0;
-    display: none;
-  }
-
   h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     /* text-align: center; */
   }
-
-  mark {
-    box-decoration-break: clone;
-    /* padding: 0.2em; */
-  }
-
-  .byline {
-    display: flex;
-    flex-direction: column;
-    font-size: 1em;
-    padding: 0.5em 1em;
-    padding-left: 1.5em;
-    padding-top: 1.5em;
-    align-self: center;
-    justify-self: center;
-  }
-
-  .byline p {
-    margin: 0;
-    line-height: 1;
-    margin-bottom: 0.5em;
-  }
-
   .instructions {
     text-transform: uppercase;
     margin-top: 2em;
@@ -134,17 +86,6 @@
     h2 {
       font-size: 3em;
     }
-
-    h1 {
-      display: block;
-      line-height: 1.4;
-    }
-
-    /* .byline {
-        align-items: flex-end;
-        padding: 0.5em 1em;
-      } */
-
     .desktop {
       display: inline;
     }

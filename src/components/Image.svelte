@@ -11,7 +11,7 @@
     unity: {
       src: "unity.gif",
       alt: "gif of my unity project",
-      caption: "Click to see the project",
+      caption: "",
       href: "https://rolikasi.github.io/covid_ukraine_unity/Tiny3D.html",
     },
     telegram: {
@@ -75,21 +75,26 @@
 <style>
   figure {
     margin: 0 auto;
-    max-width: 15em;
     padding: 1em;
   }
   img {
     border-radius: 4px;
-    max-height: 20em;
+    max-height: 13em;
     box-shadow: 0 0 8px 0px var(--fg);
   }
   figcaption {
-    margin-top: 1em;
+    margin-top: 0.7em;
     font-style: italic;
-    font-size: 0.75em;
+    font-size: 0.7em;
+  }
+
+  @media only screen and (min-width: 320px) {
+    img{
+      max-width: 15em;
+    }
   }
   @media only screen and (min-width: 640px) {
-    figure{
+    img{
       max-width: 20em;
     }
   }
