@@ -51,11 +51,18 @@
       href: "https://kloop.kg/blog/2020/12/17/ya-by-ee-vse-ravno-ubil-issledovanie-kloopa-o-femitside-v-kyrgyzstane/",
     },
     air: {
-      src: "air.gif",
+      src: "air.jpg",
       alt: "preview of my air pollution project",
       caption: "",
-      href: "https://kloop.kg/blog/2020/12/17/ya-by-ee-vse-ravno-ubil-issledovanie-kloopa-o-femitside-v-kyrgyzstane/",
-    }
+      href: "https://cabar.asia/en/how-harmful-is-the-air-in-central-asia-explained-on-the-graphs",
+    },
+    currenttv: {
+      src: "currenttv.jpg",
+      alt: "preview of currenttime project",
+      caption: "",
+      href: "https://www.currenttime.tv/a/kyrgyz-parliament-out-of-order/30870707.html",
+    },
+    
   };
 </script>
 

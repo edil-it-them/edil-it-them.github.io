@@ -7,9 +7,9 @@
 </script>
 
 <section id="intro">
-  <h2>Edil Baiyzbekov<br>Full-stack Data-journalist</h2>
-  <p>{intro}</p>
-  <p>{email}</p>
+  <h2>I'm Edil Baiyzbekov<br> A Full-stack Data-journalist<span style=font-weight:normal>👨🏽‍💻</span></h2>
+  <p class='text'>{intro}</p>
+  <p class='text'>{email}</p>
   <Links />
   <div class="instructions">
     <p><span class="desktop">Use arrow keys or </span>tap below to navigate</p>
@@ -81,6 +81,14 @@
   .next {
     bottom: 1em;
   }
+  .text {
+    font-size: 0.8em;
+  }
+  @media only screen and (min-width: 320px) {
+    .text {
+      font-size: 1em;
+    }
+  }
 
   @media only screen and (min-width: 640px) {
     h2 {
@@ -91,6 +99,9 @@
     }
     section {
       margin-top: var(--nav-height);
+    }
+    .text {
+      font-size: 1.25em;
     }
   }
 
