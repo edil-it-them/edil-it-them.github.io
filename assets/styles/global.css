@@ -83,6 +83,8 @@
   --input-thumb: var(--gray-dark);
   --highlight: var(--yellow);
 
+  --markhighlight: var(--yellow);
+  --markcolor:#363636;
   --nav-height: 128px;
 }
 
@@ -125,7 +127,7 @@ strong {
 
 body {
   font-weight: var(--normal);
-  background-color: var(--blue);
+  background-color: var(--bg5);
 }
 
 mark {
@@ -169,6 +171,8 @@ mark.custom {
 	--focus: var(--fg3);
 	--border: var(--bg3);
 	--input-thumb: var(--fg3);
+  --markhighlight: var(--fg3);
+  --markcolor: var(--off-white);
   }
 
 .slider .slide:nth-of-type(3) .slide {
@@ -184,6 +188,8 @@ mark.custom {
   --focus: var(--fg1);
   --border: var(--bg1);
   --input-thumb: var(--fg1);
+  --markhighlight: var(--fg);
+  --markcolor: var(--off-white);
 }
 
 .slider .slide:nth-of-type(4) .slide {
@@ -199,6 +205,8 @@ mark.custom {
   --focus: var(--fg2);
   --border: var(--bg2);
   --input-thumb: var(--fg2);
+  --markhighlight: var(--yellow);
+  --markcolor: var(--fg2);
 }
 
 .slider .slide:nth-of-type(5) .slide {
@@ -214,6 +222,8 @@ mark.custom {
   --focus: var(--fg3);
   --border: var(--bg3);
   --input-thumb: var(--fg3);
+  --markhighlight: var(--fg3);
+  --markcolor: var(--off-white);
 }
 .slider .slide:nth-of-type(6) .slide {
   --fg: var(--fg3);
@@ -242,6 +252,8 @@ mark.custom {
   --focus: var(--fg1);
   --border: var(--bg1);
   --input-thumb: var(--fg1);
+  --markhighlight: var(--fg);
+  --markcolor: var(--off-white);
   }
   .slider .slide:nth-of-type(8) .slide {
     --fg: var(--fg3);
