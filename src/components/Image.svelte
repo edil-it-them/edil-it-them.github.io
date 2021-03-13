@@ -36,7 +36,7 @@
       src: "arcovid.gif",
       alt: "gif of my AR project",
       caption: "Yeah, that's me!😜",
-      href: "",
+      href: "https://www.instagram.com/ar/286683049640292/?ch=OTEyODk0MDBhNTdkZmQ1NjUzZjNkZDVjNjBiYmQyOTA%3D",
     },
     maps: {
       src: "maps.gif",
