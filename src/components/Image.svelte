@@ -35,7 +35,7 @@
     arcovid: {
       src: "arcovid.gif",
       alt: "gif of my AR project",
-      caption: "",
+      caption: "Yeah, that's me!😜",
       href: "",
     },
     maps: {
@@ -95,7 +95,7 @@
     font-size: 0.7em;
   }
 
-  @media only screen and (min-width: 320px) {
+  @media only screen and (min-width: 375px) {
     img{
       max-width: 15em;
     }

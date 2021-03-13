@@ -54,7 +54,7 @@
   .gray {
     filter: contrast(10%);
   }
-  @media only screen and (min-width: 320px) {
+  @media only screen and (min-width: 375px) {
     img{
       width: 1.8em;
     }

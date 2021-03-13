@@ -7,7 +7,7 @@
 </script>
 
 <section id="intro">
-  <h2>I'm Edil Baiyzbekov<br> A Full-stack Data-journalist<span style=font-weight:normal>👨🏽‍💻</span></h2>
+  <h2>I'm Edil Baiyzbekov<br> A full-stack data-journalist<span style=font-weight:normal>👨🏽‍💻</span></h2>
   <p class='text'>{intro}</p>
   <p class='text'>{email}</p>
   <Links />
@@ -84,7 +84,7 @@
   .text {
     font-size: 0.8em;
   }
-  @media only screen and (min-width: 320px) {
+  @media only screen and (min-width: 375px) {
     .text {
       font-size: 1em;
     }

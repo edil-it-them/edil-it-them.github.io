@@ -46,7 +46,7 @@
     </p>
     <ArrowKeys active="right" />
     {#if +level == 6}
-      <p class="text last">Tap right to see other projects</p>
+      <p class="text last"><mark>Tap right to see other projects</mark></p>
     {/if}
     {#if +level < 6}
       <p class="next">
@@ -199,7 +199,7 @@
   .last {
     font-size: 0.65em;
   }
-  @media only screen and (min-width: 320px) {
+  @media only screen and (min-width: 375px) {
     .text {
       font-size: 1em;
     }
