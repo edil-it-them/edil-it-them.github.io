@@ -117,7 +117,7 @@ function handleTouchMove(evt) {
 
 <svelte:window bind:innerWidth bind:innerHeight />
 
-<!-- <Meta {...copy} /> -->
+<Meta {...copy} />
 
 <Progress total="{countX[activeY - 1] - 1}" current="{currentX}" />
 
