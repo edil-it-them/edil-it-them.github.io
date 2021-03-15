@@ -18,7 +18,7 @@
   <meta property="og:locale" content="en_US" />
 
   <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/Rolikasi/rolikasi.github.io/master/public/assets/img/ogimage.jpg" />
-  <meta property="og:image" content="http://raw.githubusercontent.com/Rolikasi/rolikasi.github.io/master/public/assets/img/ogimage.jpg" />
+  <meta property="og:image" content="https://github.com/Rolikasi/rolikasi.github.io/blob/master/public/assets/img/ogimage.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1490" />
   <meta property="og:image:height" content="928" />
