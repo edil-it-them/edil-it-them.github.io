@@ -103,6 +103,10 @@
     border-radius: 4px;
     max-height: 13em;
     box-shadow: 0 0 8px 0px var(--fg);
+    transition: transform .2s; /* Animation */
+  }
+  img:hover{
+    transform: scale(1.035);
   }
   figcaption {
     margin-top: 0.7em;
@@ -114,7 +118,7 @@
     z-index: 999;
     font-size: 12px;
     opacity: 0.8;
-    transform: rotate3d(0, 0, 1, -90deg) translateY(-100%) translateY(-50%) translateX(-40%);
+    transform: rotate3d(0, 0, 1, -90deg) translateY(-100%) translateY(-60%) translateX(-40%);
   }
 
   @media only screen and (min-width: 375px) {
