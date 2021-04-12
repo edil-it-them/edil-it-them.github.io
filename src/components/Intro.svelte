@@ -7,7 +7,7 @@
 </script>
 
 <section id="intro">
-  <h2>I'm Edil Baiyzbekov<br> A full-stack data-journalist<span style=font-weight:normal>👨🏽‍💻</span></h2>
+  <h2>I'm Edil Baiyzbekov<br> A full stack data journalist<span style=font-weight:normal>👨🏽‍💻</span></h2>
   <p class='text'>{intro}</p>
   <p class='text'>{email}</p>
   <Links />
