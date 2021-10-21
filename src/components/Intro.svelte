@@ -7,7 +7,7 @@
 </script>
 
 <section id="intro">
-  <h2>I'm Edil Baiyzbekov<br> A full stack data journalist<span style=font-weight:normal>👨🏽‍💻</span></h2>
+  <h2>I'm Edil Baiyzbekov<br> An award winning full stack data journalist<span style=font-weight:normal>👨🏽‍💻</span></h2>
   <p class='text'>{intro}</p>
   <p class='text'>{email}</p>
   <Links />
@@ -92,7 +92,7 @@
 
   @media only screen and (min-width: 640px) {
     h2 {
-      font-size: 3em;
+      font-size: 2em;
     }
     .desktop {
       display: inline;
@@ -107,7 +107,7 @@
 
   @media only screen and (min-width: 1200px) {
     h2 {
-      font-size: 4em;
+      font-size: 2.5em;
     }
   }
 </style>

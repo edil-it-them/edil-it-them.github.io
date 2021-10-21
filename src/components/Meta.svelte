@@ -1,19 +1,22 @@
 <script>
   export let hed;
+  export let dek;
+  export let introSeo;
+  export let keywords;
 </script>
 <svelte:head>
-  <title>{hed}</title>
+  <title>{hed} - {dek}</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="description" content="I'm exploring new ways to tell stories in digital space with code. Let's collab!" />
+  <meta name="description" content={introSeo} />
   <meta name="author" content="Edil Baiyzbekov" />
-  <meta name="news_keywords" content="" />
+  <meta name="keywords" content={keywords} />
 
   <meta property="og:title" content={hed} />
   <meta property="og:site_name" content={hed} />
   <meta property="og:url" content="https://rolikasi.github.io" />
-  <meta property="og:description" content="I'm exploring new ways to tell stories in digital space with code. Let's collab!" />
+  <meta property="og:description" content={introSeo} />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
 
@@ -27,7 +30,7 @@
   <meta name="twitter:site" content="https://rolikasi.github.io" />
   <meta name="twitter:creator" content={hed} />
   <meta name="twitter:title" content={hed} />
-  <meta name="twitter:description" content="I'm exploring new ways to tell stories in digital space with code. Let's collab!" />
+  <meta name="twitter:description" content={introSeo} />
   <meta name="twitter:image:src" content="https://rolikasi.github.io/assets/img/ogimage.jpg" />
 
   <meta name="robots" content="max-image-preview:large" />
