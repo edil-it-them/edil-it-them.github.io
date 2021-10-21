@@ -5,7 +5,8 @@
     d3js: {
       src: "d3js.gif",
       alt: "gif of my scrollitelling project",
-      caption: "Click to see the project, <a target='_blank' href='https://rolikasi.github.io/kenesh_visual_eng'>eng</a>",
+      caption:
+        "Click to see the project, <a target='_blank' href='https://rolikasi.github.io/kenesh_visual_eng'>eng</a>",
       href: "https://rus.azattyk.org/a/30807488.html",
       date: "2020",
     },
@@ -30,6 +31,13 @@
       href: "https://rus.azattyk.org/a/30692108.html",
       date: "2020",
     },
+    instaVideo: {
+      src: "insta.mp4",
+      caption: "",
+      href: "https://rus.azattyk.org/a/30692108.html",
+      date: "2020",
+      type: "video",
+    },
     gender: {
       src: "gender.gif",
       alt: "gif of my AR project",
@@ -41,40 +49,35 @@
       src: "arcovid.gif",
       alt: "gif of my AR project",
       caption: "Yeah, that's me!😜",
-      href:
-        "https://www.instagram.com/ar/286683049640292/?ch=OTEyODk0MDBhNTdkZmQ1NjUzZjNkZDVjNjBiYmQyOTA%3D",
+      href: "https://www.instagram.com/ar/286683049640292/?ch=OTEyODk0MDBhNTdkZmQ1NjUzZjNkZDVjNjBiYmQyOTA%3D",
       date: "2020",
     },
     maps: {
       src: "maps.gif",
       alt: "gif of my QGIS project",
       caption: "",
-      href:
-        "https://kloop.kg/blog/2019/07/26/pochemu-v-bishkeke-tak-zharko-obyasnyaem-na-teplokartah/",
+      href: "https://kloop.kg/blog/2019/07/26/pochemu-v-bishkeke-tak-zharko-obyasnyaem-na-teplokartah/",
       date: "2019",
     },
     femicid: {
       src: "femicid.jpg",
       alt: "preview of the femicid project",
       caption: "",
-      href:
-        "https://kloop.kg/blog/2020/12/17/ya-by-ee-vse-ravno-ubil-issledovanie-kloopa-o-femitside-v-kyrgyzstane/",
+      href: "https://kloop.kg/blog/2021/01/28/femicide-in-kyrgyzstan/",
       date: "2020",
     },
     air: {
       src: "air.jpg",
       alt: "preview of my air pollution project",
       caption: "",
-      href:
-        "https://cabar.asia/en/how-harmful-is-the-air-in-central-asia-explained-on-the-graphs",
+      href: "https://cabar.asia/en/how-harmful-is-the-air-in-central-asia-explained-on-the-graphs",
       date: "2020",
     },
     currenttv: {
       src: "currenttv.jpg",
       alt: "preview of currenttime project",
       caption: "",
-      href:
-        "https://www.currenttime.tv/a/kyrgyz-parliament-out-of-order/30870707.html",
+      href: "https://www.currenttime.tv/a/kyrgyz-parliament-out-of-order/30870707.html",
       date: "2020",
     },
   };
@@ -83,11 +86,18 @@
 <figure>
   <span>{data[name].date}</span>
   <a href="{data[name].href}" target="_blank">
-    <img
-      loading="lazy"
-      src="assets/img/{data[name].src}"
-      alt="{data[name].alt}"
-    />
+    {#if data[name].type == "video"}
+      <video class="img" autoplay src="assets/img/{data[name].src}" loop>
+        <track kind="captions" />
+      </video>
+    {:else}
+      <img
+        class="img"
+        loading="lazy"
+        src="assets/img/{data[name].src}"
+        alt="{data[name].alt}"
+      />
+    {/if}
   </a>
   <figcaption>
     {@html data[name].caption}
@@ -99,13 +109,14 @@
     margin: 0 auto;
     padding: 1em;
   }
-  img {
+  .img {
     border-radius: 4px;
     max-height: 13em;
     box-shadow: 0 0 8px 0px var(--fg);
-    transition: transform .2s; /* Animation */
+    transition: transform 0.2s; /* Animation */
+    max-width: 15em;
   }
-  img:hover{
+  .img:hover {
     transform: scale(1.035);
   }
   figcaption {
@@ -118,16 +129,12 @@
     z-index: 999;
     font-size: 12px;
     opacity: 0.8;
-    transform: rotate3d(0, 0, 1, -90deg) translateY(-100%) translateY(-60%) translateX(-40%);
+    transform: rotate3d(0, 0, 1, -90deg) translateY(-100%) translateY(-60%)
+      translateX(-40%);
   }
 
-  @media only screen and (min-width: 375px) {
-    img {
-      max-width: 15em;
-    }
-  }
   @media only screen and (min-width: 640px) {
-    img {
+    .img {
       max-width: 20em;
     }
   }
