@@ -84,7 +84,7 @@
   --highlight: var(--yellow);
 
   --markhighlight: var(--yellow);
-  --markcolor:#363636;
+  --markcolor: #363636;
   --nav-height: 128px;
 }
 
@@ -159,21 +159,21 @@ mark.custom {
   --input-thumb: var(--fg3);
 }
 .slider .slide:nth-of-type(2) .slide {
-	--fg: var(--fg3);
-	--bg: var(--bg3);
-	--default: var(--dg3);
-	background-color: var(--bg3);
-	color: var(--fg3);
-	--highlight: var(--bg1);
-	--background-alt: var(--bg3);
-	--text-main: var(--fg3);
-	--links: var(--fg3);
-	--focus: var(--fg3);
-	--border: var(--bg3);
-	--input-thumb: var(--fg3);
+  --fg: var(--fg3);
+  --bg: var(--bg3);
+  --default: var(--dg3);
+  background-color: var(--bg3);
+  color: var(--fg3);
+  --highlight: var(--bg1);
+  --background-alt: var(--bg3);
+  --text-main: var(--fg3);
+  --links: var(--fg3);
+  --focus: var(--fg3);
+  --border: var(--bg3);
+  --input-thumb: var(--fg3);
   --markhighlight: var(--fg3);
   --markcolor: var(--off-white);
-  }
+}
 
 .slider .slide:nth-of-type(3) .slide {
   --fg: var(--fg1);
@@ -225,22 +225,9 @@ mark.custom {
   --markhighlight: var(--fg3);
   --markcolor: var(--off-white);
 }
+
 .slider .slide:nth-of-type(6) .slide {
-  --fg: var(--fg3);
-  --bg: var(--bg5);
-  --default: var(--dg3);
-  background-color: var(--bg5);
-  color: var(--bg3);
-  --highlight: var(--bg1);
-  --background-alt: var(--bg5);
-  --text-main: var(--fg3);
-  --links: var(--fg3);
-  --focus: var(--fg3);
-  --border: var(--bg5);
-  --input-thumb: var(--fg3);
-}
-.slider .slide:nth-of-type(7) .slide {
-	--fg: var(--fg1);
+  --fg: var(--fg1);
   --bg: var(--bg1);
   --default: var(--dg1);
   background-color: var(--bg1);
@@ -254,21 +241,51 @@ mark.custom {
   --input-thumb: var(--fg1);
   --markhighlight: var(--fg);
   --markcolor: var(--off-white);
-  }
-  .slider .slide:nth-of-type(8) .slide {
-    --fg: var(--fg3);
-	--bg: var(--bg3);
-	--default: var(--dg3);
-	background-color: var(--bg6);
-	color: var(--fg3);
-	--highlight: var(--bg1);
-	--background-alt: var(--bg3);
-	--text-main: var(--fg3);
-	--links: var(--fg3);
-	--focus: var(--fg3);
-	--border: var(--bg3);
-	--input-thumb: var(--fg3);
-  }
+}
+.slider .slide:nth-of-type(7) .slide {
+  --fg: var(--fg3);
+  --bg: var(--bg5);
+  --default: var(--dg3);
+  background-color: var(--bg5);
+  color: var(--bg3);
+  --highlight: var(--bg1);
+  --background-alt: var(--bg5);
+  --text-main: var(--fg3);
+  --links: var(--fg3);
+  --focus: var(--fg3);
+  --border: var(--bg5);
+  --input-thumb: var(--fg3);
+}
+.slider .slide:nth-of-type(8) .slide {
+  --fg: var(--fg3);
+  --bg: var(--bg3);
+  --default: var(--dg3);
+  background-color: var(--bg3);
+  color: var(--fg3);
+  --highlight: var(--bg1);
+  --background-alt: var(--bg3);
+  --text-main: var(--fg3);
+  --links: var(--fg3);
+  --focus: var(--fg3);
+  --border: var(--bg3);
+  --input-thumb: var(--fg3);
+  --markhighlight: var(--fg3);
+  --markcolor: var(--off-white);
+}
+.slider .slide:nth-of-type(9) .slide {
+  --fg: var(--fg3);
+  --bg: var(--bg3);
+  --default: var(--dg3);
+  background-color: var(--bg6);
+  color: var(--fg3);
+  --highlight: var(--bg1);
+  --background-alt: var(--bg3);
+  --text-main: var(--fg3);
+  --links: var(--fg3);
+  --focus: var(--fg3);
+  --border: var(--bg3);
+  --input-thumb: var(--fg3);
+}
 /* 
 .slider.horizontal .slide:nth-of-type(n + 2) .content {
 	opacity: 0;
@@ -318,9 +335,9 @@ button {
   padding-top: 0;
 }
 
-.horizontal .slide:last-of-type .slide-content {
+/* .horizontal .slide:last-of-type .slide-content {
   padding-top: 3em;
-}
+} */
 
 @media only screen and (min-width: 640px) {
   .horizontal .slide:last-of-type .slide-content {
