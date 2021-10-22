@@ -1,24 +1,33 @@
 <script>
+  import Lazy from "svelte-lazy";
   export let name;
-
   const data = {
+    dpgmap: {
+      src: "dpgmap.mp4",
+      caption: "",
+      href: "https://digitalpublicgoods.net/map/",
+      date: "2021",
+      type: "video",
+    },
     d3js: {
-      src: "d3js.gif",
-      alt: "gif of my scrollitelling project",
+      type: "video",
+      src: "d3js.mp4",
       caption:
         "Click to see the project, <a target='_blank' href='https://rolikasi.github.io/kenesh_visual_eng'>eng</a>",
       href: "https://rus.azattyk.org/a/30807488.html",
       date: "2020",
     },
     unity: {
-      src: "unity.gif",
+      type: "video",
+      src: "unity.mp4",
       alt: "gif of my unity project",
       caption: "",
       href: "https://rolikasi.github.io/covid_ukraine_unity/Tiny3D.html",
       date: "2021",
     },
     telegram: {
-      src: "telegram.gif",
+      type: "video",
+      src: "telegram.mp4",
       alt: "gif of my telegram project",
       caption: "",
       href: "https://t.me/ClickHelpKg_bot",
@@ -46,8 +55,8 @@
       date: "2020",
     },
     arcovid: {
-      src: "arcovid.gif",
-      alt: "gif of my AR project",
+      type: "video",
+      src: "arcovid.mp4",
       caption: "Yeah, that's me!😜",
       href: "https://www.instagram.com/ar/286683049640292/?ch=OTEyODk0MDBhNTdkZmQ1NjUzZjNkZDVjNjBiYmQyOTA%3D",
       date: "2020",
@@ -85,11 +94,21 @@
 
 <figure>
   <span>{data[name].date}</span>
+
   <a href="{data[name].href}" target="_blank">
     {#if data[name].type == "video"}
-      <video class="img" autoplay src="assets/img/{data[name].src}" loop>
-        <track kind="captions" />
-      </video>
+      <Lazy>
+        <video
+          class="img lazy"
+          autoplay
+          loop
+          playsinline
+          muted
+          src="assets/img/{data[name].src}"
+        >
+          <track kind="captions" />
+        </video>
+      </Lazy>
     {:else}
       <img
         class="img"
@@ -99,6 +118,7 @@
       />
     {/if}
   </a>
+
   <figcaption>
     {@html data[name].caption}
   </figcaption>

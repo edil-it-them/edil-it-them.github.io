@@ -40,5 +40,8 @@
     "predeploy": "npm run build",
     "deploy": "rollup -c rollup.config-ssr.js",
     "start": "sirv public --host 0.0.0.0"
+  },
+  "dependencies": {
+    "svelte-lazy": "^1.0.12"
   }
 }
