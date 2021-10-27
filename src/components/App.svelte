@@ -28,9 +28,6 @@
   let countX = [];
 
   let currentX = 0;
-  // add swiper
-  document.addEventListener("touchstart", handleTouchStart, false);
-  document.addEventListener("touchmove", handleTouchMove, false);
 
   var xDown = null;
   var yDown = null;
@@ -118,7 +115,7 @@
   $: $innerH = innerHeight;
 </script>
 
-<svelte:window bind:innerWidth bind:innerHeight />
+<svelte:window on:touchmove={handleTouchMove} on:touchstart={handleTouchStart} bind:innerWidth bind:innerHeight />
 
 <Meta {...copy} />
 
