@@ -144,21 +144,8 @@ mark.custom {
   height: 100%;
 }
 
-.slider .slide:nth-of-type(1) {
-  --fg: var(--fg3);
-  --bg: var(--bg5);
-  --default: var(--dg3);
-  background-color: var(--bg5);
-  color: var(--bg3);
-  --highlight: var(--bg1);
-  --background-alt: var(--bg5);
-  --text-main: var(--fg3);
-  --links: var(--fg3);
-  --focus: var(--fg3);
-  --border: var(--bg5);
-  --input-thumb: var(--fg3);
-}
-.slider .slide:nth-of-type(2) .slide {
+
+.slider .blue {
   --fg: var(--fg3);
   --bg: var(--bg3);
   --default: var(--dg3);
@@ -175,7 +162,7 @@ mark.custom {
   --markcolor: var(--off-white);
 }
 
-.slider .slide:nth-of-type(3) .slide {
+.slider .yellow {
   --fg: var(--fg1);
   --bg: var(--bg1);
   --default: var(--dg1);
@@ -190,9 +177,10 @@ mark.custom {
   --input-thumb: var(--fg1);
   --markhighlight: var(--fg);
   --markcolor: var(--off-white);
+  --selection: var(--bg3);
 }
 
-.slider .slide:nth-of-type(4) .slide {
+.slider .pink {
   --fg: var(--fg2);
   --bg: var(--bg2);
   --default: var(--dg2);
@@ -208,71 +196,7 @@ mark.custom {
   --markhighlight: var(--yellow);
   --markcolor: var(--fg2);
 }
-
-.slider .slide:nth-of-type(5) .slide {
-  --fg: var(--fg3);
-  --bg: var(--bg3);
-  --default: var(--dg3);
-  background-color: var(--bg3);
-  color: var(--fg3);
-  --highlight: var(--bg1);
-  --background-alt: var(--bg3);
-  --text-main: var(--fg3);
-  --links: var(--fg3);
-  --focus: var(--fg3);
-  --border: var(--bg3);
-  --input-thumb: var(--fg3);
-  --markhighlight: var(--fg3);
-  --markcolor: var(--off-white);
-}
-
-.slider .slide:nth-of-type(6) .slide {
-  --fg: var(--fg1);
-  --bg: var(--bg1);
-  --default: var(--dg1);
-  background-color: var(--bg1);
-  color: var(--fg1);
-  --highlight: var(--bg3);
-  --background-alt: var(--bg1);
-  --text-main: var(--fg1);
-  --links: var(--fg1);
-  --focus: var(--fg1);
-  --border: var(--bg1);
-  --input-thumb: var(--fg1);
-  --markhighlight: var(--fg);
-  --markcolor: var(--off-white);
-}
-.slider .slide:nth-of-type(7) .slide {
-  --fg: var(--fg3);
-  --bg: var(--bg5);
-  --default: var(--dg3);
-  background-color: var(--bg5);
-  color: var(--bg3);
-  --highlight: var(--bg1);
-  --background-alt: var(--bg5);
-  --text-main: var(--fg3);
-  --links: var(--fg3);
-  --focus: var(--fg3);
-  --border: var(--bg5);
-  --input-thumb: var(--fg3);
-}
-.slider .slide:nth-of-type(8) .slide {
-  --fg: var(--fg3);
-  --bg: var(--bg3);
-  --default: var(--dg3);
-  background-color: var(--bg3);
-  color: var(--fg3);
-  --highlight: var(--bg1);
-  --background-alt: var(--bg3);
-  --text-main: var(--fg3);
-  --links: var(--fg3);
-  --focus: var(--fg3);
-  --border: var(--bg3);
-  --input-thumb: var(--fg3);
-  --markhighlight: var(--fg3);
-  --markcolor: var(--off-white);
-}
-.slider .slide:nth-of-type(9) .slide {
+.slider .light {
   --fg: var(--fg3);
   --bg: var(--bg3);
   --default: var(--dg3);
@@ -284,6 +208,20 @@ mark.custom {
   --links: var(--fg3);
   --focus: var(--fg3);
   --border: var(--bg3);
+  --input-thumb: var(--fg3);
+}
+.slider .dark {
+  --fg: var(--fg3);
+  --bg: var(--bg5);
+  --default: var(--dg3);
+  background-color: var(--bg5);
+  color: var(--bg3);
+  --highlight: var(--bg1);
+  --background-alt: var(--bg5);
+  --text-main: var(--fg3);
+  --links: var(--bg3);
+  --focus: var(--fg3);
+  --border: var(--bg5);
   --input-thumb: var(--fg3);
 }
 /* 
