@@ -89,6 +89,13 @@
       href: "https://www.currenttime.tv/a/kyrgyz-parliament-out-of-order/30870707.html",
       date: "2020",
     },
+    film: {
+      src: "film.jpg",
+      alt: "preview of documentary film project",
+      caption: "Only russian version",
+      href: "https://www.youtube.com/watch?v=oovOkT1TOwY",
+      date: "2017",
+    },
   };
 </script>
 

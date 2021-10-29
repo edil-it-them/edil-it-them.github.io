@@ -138,7 +138,7 @@
     bind:count="{countY}"
     bind:active="{activeY}"
   >
-    <Slide>
+    <Slide theme='dark'>
       <Intro hed="{copy.hed}" intro="{copy.intro}" email="{copy.email}" />
     </Slide>
 

@@ -1,12 +1,12 @@
 <script>
   import { getContext } from "svelte";
   const { direction, width, height } = getContext("Slider");
-
+  export let theme;
   $: w = $direction === "horizontal" ? `${$width}px` : "100%";
   $: h = $direction === "vertical" ? `${$height}px` : "100%";
 </script>
 
-<div class="slide" style="width: {w}; height: {h};">
+<div class="slide {theme ? theme :""}" style="width: {w}; height: {h};">
   <slot />
 </div>
 

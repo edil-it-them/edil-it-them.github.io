@@ -16,9 +16,10 @@
   export let tech;
   export let awards;
   export let outro;
+  export let theme;
 </script>
 
-<Slide>
+<Slide theme={theme}>
   <div class="slide-content intro">
     {#if +level > 0}
       <p class="prev">
@@ -45,12 +46,12 @@
       {/if}
     </p>
     <ArrowKeys active="right" />
-    {#if +level == 7}
+    {#if +level == 8}
       <p class="text last"><mark>Tap right to see other projects</mark></p>
     {/if}
-    {#if +level < 7}
+    {#if +level < 8}
       <p class="next">
-        {+level == 6 ? "Other projects" : "Project " + (+level + 1)}
+        {+level == 7 ? "Other projects" : "Project " + (+level + 1)}
         <span class="complex">: {next}</span>
         <span class="arrow"> <Icon name="arrow-down" /></span>
       </p>
@@ -58,8 +59,8 @@
   </div>
 </Slide>
 
-{#each slides as { text, className, chart, special, image }, i}
-  <Slide>
+{#each slides as { text, className, chart, special, image, theme }, i}
+  <Slide theme={theme}>
     <div class="slide-content {className || ''}">
       {#if +level > 1 && i === slides.length - 1}
         <p class="prev">
@@ -95,9 +96,9 @@
         <Image name="{image}" />
       {/if}
 
-      {#if +level < 7 && i === slides.length - 1}
+      {#if +level < 8 && i === slides.length - 1}
         <p class="next">
-          {+level == 6 ? "Other projects" : "Project " + (+level + 1)}
+          {+level == 7 ? "Other projects" : "Project " + (+level + 1)}
           <span class="arrow"> <Icon name="arrow-down" /></span>
         </p>
       {/if}

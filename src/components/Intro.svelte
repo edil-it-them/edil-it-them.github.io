@@ -9,7 +9,8 @@
 <section id="intro">
   <h2>I'm Edil Baiyzbekov<br> An award winning full stack data journalist<span style=font-weight:normal>👨🏽‍💻</span></h2>
   <p class='text'>{intro}</p>
-  <p class='text'>{email}</p>
+  <a class="text" href="mailto:{email}" target="_blank">{email}</a>
+
   <Links />
   <div class="instructions">
     <p><span class="desktop">Use arrow keys or </span>tap below to navigate</p>
