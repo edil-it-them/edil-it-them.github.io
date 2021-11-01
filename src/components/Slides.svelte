@@ -198,6 +198,14 @@
   .last {
     font-size: 0.65em;
   }
+  @media only screen and (max-width: 300px) and (max-height: 480px) {
+    .text {
+      font-size: 0.75em;
+    }
+    .last {
+    font-size: 0.6em;
+  }
+  }
   @media only screen and (min-width: 375px) {
     .text {
       font-size: 1em;

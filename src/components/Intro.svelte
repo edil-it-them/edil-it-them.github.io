@@ -7,8 +7,12 @@
 </script>
 
 <section id="intro">
-  <h2>I'm Edil Baiyzbekov<br> An award winning full stack data journalist<span style=font-weight:normal>👨🏽‍💻</span></h2>
-  <p class='text'>{intro}</p>
+  <h2>
+    I'm Edil Baiyzbekov<br /> An award winning full stack data journalist<span
+      style="font-weight:normal">👨🏽‍💻</span
+    >
+  </h2>
+  <p class="text">{intro}</p>
   <a class="text" href="mailto:{email}" target="_blank">{email}</a>
 
   <Links />
@@ -84,6 +88,11 @@
   }
   .text {
     font-size: 0.8em;
+  }
+  @media only screen and (max-width: 300px) and (max-height: 480px) {
+    .text {
+      font-size: 0.75em;
+    }
   }
   @media only screen and (min-width: 375px) {
     .text {
