@@ -1,8 +1,5 @@
-<script>
-  import { onMount } from "svelte";
+<script lang="ts">
   import Meta from "./Meta.svelte";
-  // import Header from "./Header.svelte";
-  // import Nav from "./Nav.svelte";
   import Intro from "./Intro.svelte";
   import Slides from "./Slides.svelte";
   import Tap from "./helpers/Tap.svelte";
@@ -139,11 +136,11 @@
     bind:active="{activeY}"
   >
     <Slide theme='dark'>
-      <Intro hed="{copy.hed}" intro="{copy.intro}" email="{copy.email}" />
+      <Intro intro="{copy.intro}" email="{copy.email}" />
     </Slide>
 
     {#each copy.levels as level, i}
-      <Slide>
+      <Slide theme={false}>
         <Slider
           direction="horizontal"
           bind:this="{sliderX[i]}"

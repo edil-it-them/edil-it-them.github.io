@@ -4,7 +4,7 @@
  * @param {function} cb callback function
  */
 
-function loadImage(url, cb) {
+function loadImage(url, cb = false) {
   const img = new Image();
   if (typeof cb === "function") {
     img.onload = () => cb(null, img);

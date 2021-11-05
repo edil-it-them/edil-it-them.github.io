@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
   import { getContext } from "svelte";
   const { direction, width, height } = getContext("Slider");
-  export let theme;
+  export let theme:string | boolean;
   $: w = $direction === "horizontal" ? `${$width}px` : "100%";
   $: h = $direction === "vertical" ? `${$height}px` : "100%";
 </script>

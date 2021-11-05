@@ -1,11 +1,11 @@
-<script>
+<script lang='ts'>
   import { createEventDispatcher } from "svelte";
   import Icon from "./Icon.svelte";
 
   export let debug = false;
   export let enableKeyboard = false;
   export let full = false;
-  export let showArrows = false; // boolean or array of directions
+  export let showArrows:boolean | string[] = false; // boolean or array of directions
   export let disable = [];
   export let directions = ["left", "right"];
   export let arrowStroke = "#000";
@@ -44,7 +44,7 @@
 <section class:debug style="height: {innerHeight}px;">
   {#each directions as dir}
     <button
-      on:click="{dispatch('tap', dir)}"
+      on:click="{() => dispatch('tap', dir)}"
       style="width: {getW(dir)}; height: {getH(dir)};"
       aria-label="{dir}"
       class="{dir} {arrowPosition}"

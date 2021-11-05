@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Slide from "./helpers/Slider.Slide.svelte";
   // import Chart from "./Chart.svelte";
   // import Special from "./Special.svelte";
@@ -8,22 +8,22 @@
   import Icon from "./helpers/Icon.svelte";
   import Links from "./Links.svelte";
 
-  export let level;
-  export let text;
-  export let slides;
-  export let next;
-  export let gif;
-  export let tech;
-  export let awards;
-  export let outro;
-  export let theme;
+  export let level: string;
+  export let text: string;
+  export let slides: ArrayLike<any>;
+  export let next: string|boolean = false;
+  export let gif: string|boolean = false;
+  export let tech: string|boolean = false;
+  export let awards: string|boolean = false;
+  export let outro: string|boolean = false;
+  export let theme: string|boolean = false;
 </script>
 
 <Slide theme={theme}>
   <div class="slide-content intro">
     {#if +level > 0}
       <p class="prev">
-        {level == 1 ? "My Stack" : "Project " + (level - 1)}
+        {parseInt(level, 10) == 1 ? "My Stack" : "Project " + (parseInt(level, 10) - 1)}
         <span> <Icon name="arrow-up" /></span>
       </p>
     {/if}
@@ -41,7 +41,7 @@
       {#if outro}
         <div class="special">
           <p>{@html outro}</p>
-          <Links gray="true" />
+          <Links gray={true} />
         </div>
       {/if}
     </p>
