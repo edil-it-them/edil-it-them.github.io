@@ -1,4 +1,4 @@
-<script>
+<script lang='ts'>
   import Lazy from "svelte-lazy";
   export let name;
   const data = {

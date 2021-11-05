@@ -1,9 +1,9 @@
-<script>
+<script lang='ts'>
   import Icon from "./helpers/Icon.svelte";
   import ArrowKeys from "./ArrowKeys.svelte";
   import Links from "./Links.svelte";
-  export let intro;
-  export let email;
+  export let intro:string;
+  export let email:string;
 </script>
 
 <section id="intro">

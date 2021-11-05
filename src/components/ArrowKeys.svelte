@@ -1,6 +1,6 @@
-<script>
+<script lang='ts'>
   import Icon from "./helpers/Icon.svelte";
-  export let active;
+  export let active:string;
 </script>
 
 <div>

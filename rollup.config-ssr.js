@@ -6,6 +6,7 @@ import svg from "rollup-plugin-svg";
 import json from "@rollup/plugin-json";
 import dsv from "@rollup/plugin-dsv";
 import execute from "rollup-plugin-execute";
+import typescript from '@rollup/plugin-typescript';
 
 const preprocess = sveltePreprocess({
   postcss: {
@@ -25,6 +26,7 @@ export default {
 			emitCss: false,
       preprocess
     }),
+    typescript({sourceMap: false}),
     resolve({
       browser: true,
       dedupe: ["svelte"]

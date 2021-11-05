@@ -1,13 +1,22 @@
-<script>
+<script lang="ts">
   import feather from "feather-icons";
-  export const directions = ["n", "ne", "e", "se", "s", "sw", "w", "nw"];
+  export const directions: string[] = [
+    "n",
+    "ne",
+    "e",
+    "se",
+    "s",
+    "sw",
+    "w",
+    "nw",
+  ];
 
-  export let name;
-  export let direction = "n";
-  export let strokeWidth;
-  export let stroke;
-  export let width = "1em";
-  export let height = "1em";
+  export let name: string;
+  export let direction: string = "n";
+  export let strokeWidth: string | boolean = false;
+  export let stroke: string | boolean = false;
+  export let width: string = "1em";
+  export let height: string = "1em";
 
   $: icon = feather.icons[name];
   $: rotation = directions.indexOf(direction) * 45;

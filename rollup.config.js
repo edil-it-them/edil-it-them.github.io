@@ -8,6 +8,7 @@ import dsv from "@rollup/plugin-dsv";
 import hmr from "rollup-plugin-hot";
 import execute from "rollup-plugin-execute";
 import { terser } from "rollup-plugin-terser";
+import typescript from '@rollup/plugin-typescript';
 
 const isWatch = !!process.env.ROLLUP_WATCH;
 const isLiveReload = !!process.env.LIVERELOAD;
@@ -68,6 +69,7 @@ export default {
       },
       preprocess
     }),
+    typescript({ sourceMap: !isProduction }),
     resolve({
       browser: true,
       dedupe: ["svelte"]
