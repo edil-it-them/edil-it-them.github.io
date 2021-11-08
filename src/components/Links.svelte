@@ -1,5 +1,4 @@
 <script>
-  import Image from "./Image.svelte";
   export let gray = false;
 
   const links = [
@@ -20,7 +19,6 @@
   {#each links as link}
     <figure>
       <a href="{link.url}" target="_blank">
-        <!-- {@html link.svg} -->
         <img
           class:gray
           loading="lazy"

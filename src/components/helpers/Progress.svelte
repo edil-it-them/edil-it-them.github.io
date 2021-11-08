@@ -1,6 +1,6 @@
-<script lang='ts'>
-  export let total;
-  export let current;
+<script lang="ts">
+  export let total: number;
+  export let current: number;
 
   $: w = (current / total) * 100;
 </script>

@@ -1,6 +1,6 @@
 <script lang='ts'>
   import Lazy from "svelte-lazy";
-  export let name;
+  export let name:string;
   const data = {
     dpgmap: {
       src: "dpgmap.mp4",

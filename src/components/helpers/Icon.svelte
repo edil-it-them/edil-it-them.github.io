@@ -13,8 +13,8 @@
 
   export let name: string;
   export let direction: string = "n";
-  export let strokeWidth: string | boolean = false;
-  export let stroke: string | boolean = false;
+  export let strokeWidth: string = undefined;
+  export let stroke: string = undefined;
   export let width: string = "1em";
   export let height: string = "1em";
 

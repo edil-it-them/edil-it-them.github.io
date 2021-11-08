@@ -28,6 +28,7 @@
     "shelljs": "^0.8.4",
     "sirv-cli": "^1.0.14",
     "svelte": "^3.44.1",
+    "svelte-check": "^2.2.8",
     "svelte-preprocess": "^4.9.8",
     "typescript": "^4.4.4"
   },
@@ -39,7 +40,8 @@
     "dev": "npm run dev:rollup",
     "predeploy": "npm run build",
     "deploy": "rollup -c rollup.config-ssr.js",
-    "start": "sirv public --host 0.0.0.0"
+    "start": "sirv public --host 0.0.0.0",
+    "svelte-check": "svelte-check"
   },
   "dependencies": {
     "svelte-lazy": "^1.0.12"
