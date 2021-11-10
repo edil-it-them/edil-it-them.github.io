@@ -1,11 +1,11 @@
-<script lang='ts'>
+<script lang="ts">
   import { createEventDispatcher } from "svelte";
   import Icon from "./Icon.svelte";
 
   export let debug = false;
   export let enableKeyboard = false;
   export let full = false;
-  export let showArrows:boolean | string[] = false; // boolean or array of directions
+  export let showArrows: boolean | string[] = false; // boolean or array of directions
   export let disable = [];
   export let directions = ["left", "right"];
   export let arrowStroke = "#000";
@@ -13,19 +13,19 @@
   export let arrowPosition = "center"; // start, center, end
 
   const dispatch = createEventDispatcher();
-  let innerHeight;
-  let innerWidth;
+  let innerHeight: number;
+  let innerWidth: number;
 
   $: size = innerWidth < 640 ? "72px" : "64px";
   $: arrowSize = innerWidth < 640 ? "64px" : "48px";
 
   // modified
-  $: getW = (dir) =>
+  $: getW = (dir: string) =>
     ["left", "right"].includes(dir) ? size : full ? "100%" : "172px";
-  $: getH = (dir) =>
+  $: getH = (dir: string) =>
     ["up", "down"].includes(dir) ? size : full ? "100%" : size;
 
-  $: onKeyDown = (e) => {
+  $: onKeyDown = (e: KeyboardEvent) => {
     const dir = e.key.replace("Arrow", "").toLowerCase();
     const hasDir = directions.includes(dir);
     if (enableKeyboard && hasDir) {
@@ -50,12 +50,16 @@
       class="{dir} {arrowPosition}"
       class:full
       class:visible="{visibleArrows.includes(dir)}"
-      disabled="{disable.includes(dir)}">
+      disabled="{disable.includes(dir)}"
+    >
       {#if visibleArrows.includes(dir)}
-        <span style="font-size: {arrowSize};"><Icon
+        <span style="font-size: {arrowSize};"
+          ><Icon
             name="chevron-{dir}"
             stroke="{arrowStroke}"
-            strokeWidth="{arrowStrokeWidth}" /></span>
+            strokeWidth="{arrowStrokeWidth}"
+          /></span
+        >
       {/if}
     </button>
   {/each}

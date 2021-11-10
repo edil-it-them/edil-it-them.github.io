@@ -8,17 +8,17 @@
   import Slide from "./helpers/Slider.Slide.svelte";
   import loadImage from "../utils/loadImage.js";
 
-  import { visibleIndex, innerH } from "../stores/nav.js";
+  import { innerH } from "../stores/nav.js";
   import copy from "../data/copy.json";
 
   const gif = "https://pudding.cool/assets/img/custom.gif";
 
-  let innerWidth;
-  let innerHeight;
+  let innerWidth: number;
+  let innerHeight: number;
 
   let sliderY;
-  let activeY;
-  let countY;
+  let activeY: number;
+  let countY: number;
 
   let sliderX = [];
   let activeX = [];
@@ -29,20 +29,17 @@
   var xDown = null;
   var yDown = null;
 
-  function getTouches(evt) {
-    return (
-      evt.touches || // browser API
-      evt.originalEvent.touches
-    ); // jQuery
+  function getTouches(evt: TouchEvent) {
+    return evt.touches; // browser API
   }
 
-  function handleTouchStart(evt) {
+  function handleTouchStart(evt: TouchEvent) {
     const firstTouch = getTouches(evt)[0];
     xDown = firstTouch.clientX;
     yDown = firstTouch.clientY;
   }
 
-  function handleTouchMove(evt) {
+  function handleTouchMove(evt: TouchEvent) {
     if (!xDown || !yDown) {
       return;
     }
@@ -89,7 +86,7 @@
 
   let visited = [];
 
-  const log = (y) => {
+  const log = (y: number) => {
     if (!visited[y])
       loadImage(`${gif}?key=y&value=${visited[visited.length - 1]}`);
     visited[y] = true;
@@ -112,7 +109,12 @@
   $: $innerH = innerHeight;
 </script>
 
-<svelte:window on:touchmove={handleTouchMove} on:touchstart={handleTouchStart} bind:innerWidth bind:innerHeight />
+<svelte:window
+  on:touchmove="{handleTouchMove}"
+  on:touchstart="{handleTouchStart}"
+  bind:innerWidth
+  bind:innerHeight
+/>
 
 <Meta {...copy} />
 
@@ -135,12 +137,12 @@
     bind:count="{countY}"
     bind:active="{activeY}"
   >
-    <Slide theme='dark'>
+    <Slide theme="dark">
       <Intro intro="{copy.intro}" email="{copy.email}" />
     </Slide>
 
     {#each copy.levels as level, i}
-      <Slide theme={false}>
+      <Slide theme="{false}">
         <Slider
           direction="horizontal"
           bind:this="{sliderX[i]}"

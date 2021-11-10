@@ -11,12 +11,12 @@
   export let level: string;
   export let text: string;
   export let slides: ArrayLike<any>;
-  export let next: string|boolean = false;
-  export let gif: string|boolean = false;
-  export let tech: string|boolean = false;
-  export let awards: string|boolean = false;
-  export let outro: string|boolean = false;
-  export let theme: string|boolean = false;
+  export let next: string = undefined;
+  export let gif: string = undefined;
+  export let tech: string = undefined;
+  export let awards: string = undefined;
+  export let outro: string = undefined;
+  export let theme: string = undefined;
 </script>
 
 <Slide theme={theme}>
@@ -59,7 +59,7 @@
   </div>
 </Slide>
 
-{#each slides as { text, className, chart, special, image, theme }, i}
+{#each slides as { text, className, chart, image, theme }, i}
   <Slide theme={theme}>
     <div class="slide-content {className || ''}">
       {#if +level > 1 && i === slides.length - 1}

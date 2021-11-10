@@ -10,7 +10,6 @@
 <script>
   import { setContext, onMount } from "svelte";
   import { writable } from "svelte/store";
-  import Slide from "./Slider.Slide.svelte";
 
   export let direction = "horizontal";
   export let duration = "500ms";
@@ -30,7 +29,6 @@
   let isInView = false;
   let sliderEl;
   let translateEl;
-  let root;
   let observer;
 
   let _direction = writable();
