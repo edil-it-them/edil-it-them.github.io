@@ -9,6 +9,7 @@
     "@rollup/plugin-replace": "^2.3.4",
     "@rollup/plugin-typescript": "^8.3.0",
     "@tsconfig/svelte": "^2.0.1",
+    "@types/lodash.debounce": "^4.0.6",
     "archieml": "^0.4.2",
     "autoprefixer": "^10.2.4",
     "compression": "^1.7.4",
@@ -44,6 +45,7 @@
     "svelte-check": "svelte-check"
   },
   "dependencies": {
+    "@types/feather-icons": "^4.7.0",
     "svelte-lazy": "^1.0.12"
   }
 }

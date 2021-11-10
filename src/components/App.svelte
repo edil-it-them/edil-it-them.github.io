@@ -16,7 +16,7 @@
   let innerWidth: number;
   let innerHeight: number;
 
-  let sliderY;
+  let sliderY: { next(): void; prev(): void; jump(): void };
   let activeY: number;
   let countY: number;
 
