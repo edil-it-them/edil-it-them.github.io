@@ -21,9 +21,9 @@ jobs:
         run: npm install
       - name: download content from gdoc
         run: npm run gdoc
-      - name: build site
-        run: npm run svelte-check
       - name: check svelte
+        run: npm run svelte-check
+      - name: build site
         run: npm run deploy
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
