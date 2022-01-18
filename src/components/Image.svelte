@@ -22,7 +22,7 @@
       src: "unity.mp4",
       alt: "gif of my unity project",
       caption: "",
-      href: "https://rolikasi.github.io/covid_ukraine_unity/Tiny3D.html",
+      href: "https://rolikasi.github.io/covid_ukraine_unity/",
       date: "2021",
     },
     telegram: {
