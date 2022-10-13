@@ -1,9 +1,24 @@
 {
-    "extends": "@tsconfig/svelte/tsconfig.json",
-  
-    "include": ["src/**/*"],
-    "exclude": ["node_modules/*", "public/*"],
-    "compilerOptions": {
-        "resolveJsonModule": true
-    }
+	"extends": "./.svelte-kit/tsconfig.json",
+	"compilerOptions": {
+		"paths": {
+			"$stores/*": ["./src/stores/*"],
+			"$lib": ["./src/lib"],
+			"$lib/*": ["./src/lib/*"],
+			"$data/*": ["./src/data/*"],
+			"$utils/*": ["./src/utils/*"]
+		},
+		"allowJs": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"lib": ["es2020", "DOM"],
+		"moduleResolution": "node",
+		"module": "es2020",
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"target": "es2020"
+	}
 }

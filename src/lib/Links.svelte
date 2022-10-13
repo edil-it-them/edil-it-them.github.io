@@ -22,7 +22,7 @@
         <img
           class:gray
           loading="lazy"
-          src="assets/img/{link.name + '.svg'}"
+          src="./img/{link.name + '.svg'}"
           alt="{link.name} logo"
         />
       </a>

@@ -1,5 +1,8 @@
 .DS_Store
 node_modules
-yarn-error.log
-.tmp
-ssr
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
