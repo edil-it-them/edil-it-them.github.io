@@ -16,7 +16,7 @@
 			type: 'video',
 			src: 'd3js.mp4',
 			caption:
-				"Click to see the project, <a target='_blank' href='https://rolikasi.github.io/kenesh_visual_eng'>eng</a>",
+				"Click to see the project, <a target='_blank' href='https://edil-it-them.github.io/kenesh_visual_eng'>eng</a>",
 			href: 'https://rus.azattyk.org/a/30807488.html',
 			date: '2020'
 		},
@@ -25,7 +25,7 @@
 			src: 'unity.mp4',
 			alt: 'gif of my unity project',
 			caption: '',
-			href: 'https://rolikasi.github.io/covid_ukraine_unity/',
+			href: 'https://edil-it-them.github.io/covid_ukraine_unity/',
 			date: '2021'
 		},
 		telegram: {
