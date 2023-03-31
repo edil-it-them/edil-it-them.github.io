@@ -46,12 +46,12 @@
       {/if}
     </p>
     <ArrowKeys active="right" />
-    {#if +level == 10}
+    {#if +level == 11}
       <p class="text last"><mark>Tap right to see other projects</mark></p>
     {/if}
-    {#if +level < 10}
+    {#if +level < 11}
       <p class="next">
-        {+level == 9 ? "Other projects" : "Project " + (+level + 1)}
+        {+level == 10 ? "Other projects" : "Project " + (+level + 1)}
         <span class="complex">: {next}</span>
         <span class="arrow"> <Icon name="arrow-down" /></span>
       </p>
@@ -96,9 +96,9 @@
         <Image name="{image}" />
       {/if}
 
-      {#if +level < 8 && i === slides.length - 1}
+      {#if +level < 11 && i === slides.length - 1}
         <p class="next">
-          {+level == 7 ? "Other projects" : "Project " + (+level + 1)}
+          {+level == 10 ? "Other projects" : "Project " + (+level + 1)}
           <span class="arrow"> <Icon name="arrow-down" /></span>
         </p>
       {/if}

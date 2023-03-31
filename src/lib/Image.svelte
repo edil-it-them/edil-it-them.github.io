@@ -5,6 +5,13 @@
 	let video;
 
 	const data = {
+		soundofwar: {
+			src: 'soundofwar.mp4',
+			caption: '',
+			href: 'https://soundofwar.art',
+			date: '2023',
+			type: 'video'
+		},
 		dpgmap: {
 			src: 'dpgmap.mp4',
 			caption: '',
