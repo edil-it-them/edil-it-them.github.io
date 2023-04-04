@@ -15,7 +15,7 @@
 		dpgmap: {
 			src: 'dpgmap.mp4',
 			caption: '',
-			href: 'https://digitalpublicgoods.net/map/',
+			href: 'https://digital-public-goods-map.vercel.app/',
 			date: '2021',
 			type: 'video'
 		},
