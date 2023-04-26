@@ -13,7 +13,7 @@
 
 <section id="intro">
 	<h2>
-		I'm Edil Baiyzbekov<br /> An award-winning data visualization engineer and artist👨🏽‍💻
+		I'm Edil Baiyzbekov<br /> An award-winning data visualization developer, software engineer and artist👨🏽‍💻
 		<span class="relative">
 			<!-- {#key i}<span in:fly class=""> {carousel[i]} 👨🏽‍💻</span>{/key} -->
 
@@ -21,7 +21,7 @@
 		</span>
 	</h2>
 	<p class="text">{intro}</p>
-	<a class="text" href="mailto:{email}" target="_blank">{email}</a>
+	<a class="text mb-2" href="mailto:{email}" target="_blank">{email}</a>
 
 	<Links />
 	<div class="instructions">
