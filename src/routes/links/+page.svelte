@@ -1,6 +1,10 @@
 <script>
 	let links = [
 		{
+			name: 'comeback into the bass',
+			url: 'https://soundcloud.com/edil-it-them/comeback-into-vibe'
+		},
+		{
 			name: 'Arab and Ukrainian bass resistance',
 			url: 'https://soundcloud.com/edil-it-them/arab-and-ukrainian-bass-resistance-mix'
 		},
