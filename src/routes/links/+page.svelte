@@ -19,18 +19,13 @@
 		{
 			name: 'razyob-and-pizdyachka',
 			url: 'https://soundcloud.com/edil-it-them/razyob-and-pizdyachka'
-		},
-		{ name: 'afterglow practice', url: 'https://soundcloud.com/edil-it-them/afterglow-practice' }
+		}
 	];
 </script>
 
 <div class="flex flex-col h-full mx-4">
 	<div class="flex flex-col max-w-md mx-auto text-center text-white my-auto w-full">
-		<h2
-			class="text-2xl font-bold animate-color-transition"
-		>
-			DJ shows
-		</h2>
+		<h2 class="text-2xl font-bold animate-color-transition">DJ shows</h2>
 		{#each links as link}
 			<a
 				href={link.url}
@@ -44,18 +39,18 @@
 </div>
 
 <style>
-    @keyframes color-transition {
-    0% {
-      color: #ffffff; /* Start color */
-    }
-    50% {
-      color: #F56D20; /* Middle color */
-    }
-    100% {
-      color: #ffffff; /* End color */
-    }
-  }
-  .animate-color-transition {
+	@keyframes color-transition {
+		0% {
+			color: #ffffff; /* Start color */
+		}
+		50% {
+			color: #f56d20; /* Middle color */
+		}
+		100% {
+			color: #ffffff; /* End color */
+		}
+	}
+	.animate-color-transition {
 		animation: color-transition 4s infinite;
 	}
 	/* .animated-gradient-text_foreground__PuOdy {
