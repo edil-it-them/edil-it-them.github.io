@@ -22,9 +22,8 @@
 		d3js: {
 			type: 'video',
 			src: 'd3js.mp4',
-			caption:
-				"Click to see the project, <a target='_blank' href='https://edil-it-them.github.io/kenesh_visual_eng'>eng</a>",
-			href: 'https://rus.azattyk.org/a/30807488.html',
+			caption: '',
+			href: 'https://edil-it-them.github.io/kenesh_visual_eng',
 			date: '2020'
 		},
 		unity: {
