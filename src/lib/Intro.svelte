@@ -13,7 +13,8 @@
 
 <section id="intro">
 	<h2>
-		I'm Edil Baiyzbekov<br /> An award-winning data visualization developer, software engineer and artist👨🏽‍💻
+		I'm Edil Baiyzbekov<br /> An Award-winning data visualization & software engineer,
+		data-journalist and artist👨🏽‍💻
 		<span class="relative">
 			<!-- {#key i}<span in:fly class=""> {carousel[i]} 👨🏽‍💻</span>{/key} -->
 
