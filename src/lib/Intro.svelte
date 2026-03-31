@@ -32,7 +32,7 @@
 	</div>
 
 	<p class="next">
-		My stack
+		About
 		<span class="icon-arrow"> <Icon name="arrow-down" /></span>
 	</p>
 </section>

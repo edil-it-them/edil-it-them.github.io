@@ -23,7 +23,7 @@
 	<div class="slide-content intro">
 		{#if +level > 0}
 			<p class="prev">
-				{parseInt(level, 10) == 1 ? 'My Stack' : 'Project ' + (parseInt(level, 10) - 1)}
+				{parseInt(level, 10) == 1 ? 'About' : 'Project ' + (parseInt(level, 10) - 1)}
 				<span> <Icon name="arrow-up" /></span>
 			</p>
 		{:else}
@@ -77,7 +77,7 @@
 				</p>
 			{:else if +level == 1 && i === slides.length - 1}
 				<p class="prev">
-					My Stack
+					About
 					<span> <Icon name="arrow-up" /></span>
 				</p>
 			{:else if +level == 0 && i === slides.length - 1}
